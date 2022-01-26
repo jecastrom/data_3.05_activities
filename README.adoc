@@ -75,7 +75,9 @@ toc::[]
 
 * Discuss which method will be more efficient.
 
-* Find the most active customer for each district in Central Bohemia.
+== Activity:
+
+=== Find the most active customer for each district in Central Bohemia.
 
 ====
 ''''
