@@ -67,6 +67,73 @@ toc::[]
 
 === Find out the average number of transactions by account. Get those accounts that have more transactions than the average.
 
+`*_Answer:_*`
+
+```sql
+CREATE TEMPORARY TABLE avg_count_trans
+SELECT
+    avg(avg_no_of_transactions_by_account) AS avg_count_trans
+FROM
+    (
+        SELECT
+            (
+                SELECT
+                    avg(count(account_id))
+            ) AS avg_no_of_transactions_by_account
+        FROM
+            trans
+        GROUP BY
+            account_id
+    ) AS t;
+```
+```sql
+SELECT
+    account_id,
+    (
+        SELECT
+            floor(avg(count(account_id)))
+    ) AS equal_and_less_than_avg
+FROM
+    trans
+GROUP BY
+    1
+HAVING
+    equal_and_less_than_avg <= (
+        SELECT
+            *
+        FROM
+            avg_count_trans
+    )
+ORDER BY
+    2 DESC;
+```
+
+```sql
+SELECT
+    account_id,
+    (
+        SELECT
+            floor(avg(count(account_id)))
+    ) AS no_trans_above_avg
+FROM
+    trans
+GROUP BY
+    1
+HAVING
+    no_trans_above_avg > (
+        SELECT
+            *
+        FROM
+            avg_count_trans
+    )
+ORDER BY
+    2 DESC;
+```
+
+image::path[width=800]
+
+
+
 == Activity:
 
 === Get a list of accounts from Central Bohemia using a subquery.
