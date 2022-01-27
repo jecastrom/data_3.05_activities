@@ -16,4 +16,6 @@ HAVING
             avg_count_trans
     )
 ORDER BY
-    2 DESC;
+    2 DESC
+LIMIT
+    10;

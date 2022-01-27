@@ -86,6 +86,9 @@ FROM
             account_id
     ) AS t;
 ```
+
+image::https://user-images.githubusercontent.com/63274055/151272176-8d4bdeb2-53ed-4b35-9309-739d93eb8e0b.png[width=600]
+
 ```sql
 SELECT
     account_id,
@@ -107,7 +110,7 @@ HAVING
 ORDER BY
     2 DESC;
 ```
-
+image::https://user-images.githubusercontent.com/63274055/151272367-3a368f8e-cd88-4b60-a38a-31d3758cb03d.png[width=600]
 ```sql
 SELECT
     account_id,
@@ -130,7 +133,7 @@ ORDER BY
     2 DESC;
 ```
 
-image::path[width=800]
+image::https://user-images.githubusercontent.com/63274055/151272521-e060de56-ee1a-4479-bbff-05969254e7a1.png[width=600]
 
 
 
