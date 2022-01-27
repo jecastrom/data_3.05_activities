@@ -4,7 +4,7 @@
 :image-url-ironhack: https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png
 :my-name: Jorge Castro DAPT NOV2021
 :description: SQL queries Activities
-//:script-url: ADD SCRIPT URL HERE 
+:rel-cont: https://github.com/jecastrom/lab-sql-subqueries.git
 :toc:
 :toc-title: Activities | Description: Keep working on the bank database.
 :toc-placement!:
@@ -52,7 +52,7 @@ image::{image-url-ironhack}[width=70]
 
 {my-name}
 
-
+{rel-cont}[Related content: Lab SQL Subqueries]
                                                      
 ====
 ''''
@@ -154,7 +154,7 @@ _First I calculate the average number of transactions by account, then calculate
 ====
 
 
-{script-url}[Solutions script only]
+{rel-cont}[Related content: Lab SQL Subqueries]
 
 ====
 ''''
