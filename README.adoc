@@ -167,11 +167,64 @@ image::https://user-images.githubusercontent.com/63274055/151357181-cd2990ee-175
 
 * Rewrite the previous as a join query.
 
+`*_Answer:_*`
+
+```sql
+SELECT
+    account_id,
+    a3 AS region
+FROM
+    `account` a
+    INNER JOIN district d ON a.district_id = d.a1
+WHERE
+    a3 = 'central Bohemia';
+```
+
+image::https://user-images.githubusercontent.com/63274055/151358904-7dc52fda-9c9e-4749-a39e-53f67aca6be1.png[width=600]
+
+
+
 * Discuss which method will be more efficient.
 
 == Activity:
 
 === Find the most active customer for each district in Central Bohemia.
+
+`*_Answer:_*`
+
+```sql
+SELECT
+    account_id,
+    count(trans_id) AS num_of_transactions
+FROM
+    trans
+WHERE
+    account_id IN (
+        SELECT
+            account_id
+        FROM
+            account
+        WHERE
+            district_id IN (
+                SELECT
+                    a1
+                FROM
+                    district
+                WHERE
+                    a3 = 'central Bohemia'
+            )
+    )
+GROUP BY
+    1
+ORDER BY
+    2 DESC
+LIMIT
+    1;
+```
+
+image::https://user-images.githubusercontent.com/63274055/151362661-b3ee5a0f-c484-47ab-b894-6505f08f82c9.png[width=600]
+
+
 
 ====
 ''''

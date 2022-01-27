@@ -1,15 +1,27 @@
 SELECT
-    DISTINCT account_id
+    account_id,
+    count(trans_id) AS num_of_transactions
 FROM
-    account
+    trans
 WHERE
-    district_id IN (
+    account_id IN (
         SELECT
-            DISTINCT A1
+            account_id
         FROM
-            district
+            account
         WHERE
-            A3 = 'central Bohemia'
+            district_id IN (
+                SELECT
+                    a1
+                FROM
+                    district
+                WHERE
+                    a3 = 'central Bohemia'
+            )
     )
+GROUP BY
+    1
+ORDER BY
+    2 DESC
 LIMIT
-    10;
+    1;
