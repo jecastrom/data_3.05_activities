@@ -65,7 +65,9 @@ toc::[]
 
 == Activity:
 
-=== Find out the average number of transactions by account. Get those accounts that have more transactions than the average.
+=== Find out the average number of transactions by account. 
+
+* Get those accounts that have more transactions than the average.
 
 `*_Answer:_*`
 
@@ -139,6 +141,11 @@ _First I calculate the average number of transactions by account, then calculate
 
 _If I display only the average number of transactions by account the output would be the averages per account from 6 to 548. This would have been redundant as the second part of the question asked me to display accounts that have more transactions than the average._
 
+xref:3-05-Activity-1-to-3[Top Section]
+
+xref:Find-the-most-active-customer-for-each-district-in-Central-Bohemia[Bottom section]
+
+
 == Activity:
 
 === Get a list of accounts from Central Bohemia using a subquery.
@@ -186,9 +193,14 @@ image::https://user-images.githubusercontent.com/63274055/151358904-7dc52fda-9c9
 
 * Discuss which method will be more efficient.
 
+xref:3-05-Activity-1-to-3[Top Section]
+
+xref:Find-the-most-active-customer-for-each-district-in-Central-Bohemia[Bottom section]
+
+
 == Activity:
 
-=== Find the most active customer for each district in Central Bohemia.
+=== Find the most active customer for each district in Central Bohemia
 
 `*_Answer:_*`
 
@@ -241,7 +253,7 @@ image::https://user-images.githubusercontent.com/63274055/151362661-b3ee5a0f-c48
 
 xref:3-05-Activity-1-to-3[Top Section]
 
-xref:Last-section[Bottom section]
+xref:Find-the-most-active-customer-for-each-district-in-Central-Bohemia[Bottom section]
 
 
 ////
