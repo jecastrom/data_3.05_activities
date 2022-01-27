@@ -138,10 +138,32 @@ image::https://user-images.githubusercontent.com/63274055/151272521-e060de56-ee1
 _First I calculate the average number of transactions by account, then calculate the total average which is 192. I have separated the output into accounts with a number of transactions equal or below average and accounts with a number of transactions above average._
 
 _If I display only the average number of transactions by account the output would be the averages per account from 6 to 548. This would have been redundant as the second part of the question asked me to display accounts that have more transactions than the average._
- 
+
 == Activity:
 
 === Get a list of accounts from Central Bohemia using a subquery.
+
+`*_Answer:_*`
+
+```sql
+SELECT
+    DISTINCT account_id
+FROM
+    account
+WHERE
+    district_id IN (
+        SELECT
+            DISTINCT A1
+        FROM
+            district
+        WHERE
+            A3 = 'central Bohemia'
+    );
+```
+
+image::https://user-images.githubusercontent.com/63274055/151357181-cd2990ee-1755-4cbd-b8a2-d71cecb79053.png[width=600]
+
+
 
 * Rewrite the previous as a join query.
 
