@@ -135,7 +135,9 @@ ORDER BY
 
 image::https://user-images.githubusercontent.com/63274055/151272521-e060de56-ee1a-4479-bbff-05969254e7a1.png[width=600]
 
-_First I calculate the average number of transactions by account, then calculate the total average which is 192. I have separated the output into accounts with a number of transactions equal or below average and accounts with a number of transactions above average. If I display only the average number of transactions by account the output would be an averages per account from 6 to 548. This would have been redundant as the second part of the question asked me to display accounts that have more transactions than the average. And the total average of transactions is 192._
+_First I calculate the average number of transactions by account, then calculate the total average which is 192. I have separated the output into accounts with a number of transactions equal or below average and accounts with a number of transactions above average._
+
+_If I display only the average number of transactions by account the output would be an averages per account from 6 to 548. This would have been redundant as the second part of the question asked me to display accounts that have more transactions than the average. So from a list of average number of transactions bz account, I calculated the total average of transactions which is 192._
 
 == Activity:
 
